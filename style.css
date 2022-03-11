@@ -1,0 +1,164 @@
+:root{
+    --dark: #33393F;
+    --paragraph_color : white;
+    --title_color: #E866EC;
+
+    --outer-space: #33393f;
+    --bright-turquoise: #2aefcb;
+    --gin: #e0eae4;
+    --heliotrope: #e866ec;
+}
+
+::selection{
+    background-color: aqua;
+    color: var(--dark);
+}
+
+body{  
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    background-color: var(--dark);
+}
+
+header{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+h1{
+    font-size: 4rem;
+    color: var(--title_color);
+    margin-bottom: 10px;
+}
+
+header p{
+    color: var(--paragraph_color);
+    font-size: 1.5rem;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column{
+    display: flex;
+    flex: 1 0 100%;
+    margin-bottom: 80px;
+}
+
+
+.code-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 85%;
+    padding: 2rem;
+    border: var(--paragraph_color) dashed 3px;
+    width: 85%;
+    
+    
+}
+
+.code-card .code-block {
+    position: relative;
+    flex-grow: 1;
+  }
+
+.card-header{
+    background-color: var(--dark);
+    background-color: var(--dark);
+    border-radius: 10px;
+    border: solid var(--paragraph_color) 1px;
+    color: var(--title_color);
+    font-size: 3rem;
+}
+
+.code-card .card-header{
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--outer-space);
+    color: var(--heliotrope);
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card p{
+    color: var(--title_color);
+    position: relative;
+    font-size: 1.5rem;
+
+}
+
+.code-card pre:active {
+    user-select: all;
+}
+
+.linear-gradient-background {
+    background-image: linear-gradient(
+      rgba(232, 102, 236, 0.3) 0%,
+      rgba(232, 102, 236, 0.6) 100%
+    );
+    color: var(--paragraph_color);
+    font-size: 18px;
+    border-radius: 10px;
+    position: relative;
+    white-space: pre-wrap;
+    overflow: auto;
+    
+    font-size: 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.code-card .card-header {
+    transition: all 0.5s ease-in-out;
+}
+    
+.code-card:hover, .code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}
+
+footer{
+    text-align: center;
+    font-size: 45px;
+    color: var(--title_color);
+    font-family: 'Segoe UI';
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 768px)  {
+
+
+    header p{
+        margin: auto 8%;
+        color: var(--paragraph_color);
+        top: -15px;
+    }
+
+
+    .column{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header p{
+        margin: auto 12%;
+        color: var(--paragraph_color);
+        top: -15px;
+    }
+
+    .column{
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+}
